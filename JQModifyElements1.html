@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery and Modifying Elements</title>
+
+  <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+ </head>
+
+ <body>
+  <p style="color:red" id="Steve">Hello From Paragraph One</p>
+  <p style="color:blue" id="Dave">Goodbye From Paragraph Two</p>
+  
+  <script>
+   $(document).ready(function(){
+     // get information in first paragraph:
+     var pId1   = $("p:first").attr('id');
+     var pText1 = $("p:first").text();
+  
+     // get information in last paragraph:
+     var pId2   = $("p:last").attr('id');
+     var pText2 = $("p:last").text();
+
+     $("p:first").html(pText2);
+     $("p:last").html(pText1);
+   //$("p:first").text(pText2);
+   //$("p:last").text(pText1);
+   });
+  </script>
+ </body>
+</html>
+

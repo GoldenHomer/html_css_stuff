@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <title>Creating Elements with jQuery</title>
+
+  <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+
+  <style>
+    div {
+      position: relative;
+      width:  400px;
+      background: #aaa;
+    }
+  </style>
+ </head>
+
+ <body> 
+  <div id="div1">
+    <p style="color:red"    id="Steve">Hello From Paragraph One</p>
+  </div> 
+  <div id="div2"> 
+    <p style="color:red"    id="Dave">Dave Says Goodbye From Two</p>
+  </div> 
+  <div id="div3"> 
+    <p style="color:yellow" id="Jane">Jane Says Hello</p>
+  </div> 
+  <div id="div4"> 
+    <p style="color:green"  id="Michelle">Michelle Says Goodbye</p>
+  </div> 
+  <div id="div5"> 
+    <p style="color:black"  id="Jim">Jim Just Woke Up</p>
+  </div> 
+  <div id="div6"> 
+    <p style="color:red"    id="Tracy">Tracy Went To Sleep</p>
+  </div> 
+
+  <script>
+   $(document).ready(function(){
+     // append a clone of the #Dave element to "#div2":
+     $("#Dave").clone().css({color:"#000"}).appendTo("#div2");
+
+     // append another clone of the #Dave element to "#div2":
+     $("#Dave").clone().css({color:"#00f"}).appendTo("#div2");
+
+     // move the red #Dave to the end of "#div4":
+     $("#Dave").appendTo("#div4");
+
+     // prepend #Dave to all the 'div' elements:
+   //$("#Dave").clone().prependTo("div");
+   });
+  </script>
+ </body>
+</html>
+

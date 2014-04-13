@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <title>Hello World</title>
+
+  <script src="http://code.jquery.com/jquery-2.0.0b1.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+ </head>
+
+ <body>
+  <p id="Steve">Hello World From a Paragraph</p>
+
+  <script>
+   $(document).ready(function(){
+     // get the 'id' value 
+     var pId   = $("p").attr("id");
+
+     // get the text in the <p> element
+     var pText = $("p").text();
+     console.log (pId+" says "+pText);
+
+     // update the text in the <p> element
+     $("p").text("Goodbye World From a Paragraph");
+     pText = $("p").text();
+     console.log(pId+" says "+pText);
+   });
+  </script>
+ </body>
+</html>
+

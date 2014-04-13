@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JQuery Ajax</title>
+ <meta charset=utf-8 />
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+ </script>
+
+ <script> 
+  var url = "http://localhost:8080/sample.xml";
+
+  $(document).ready(function() {
+    $("#myDiv").load(url, function() {});
+  });
+ </script>
+</head>
+
+<body> 
+  <div id="myDiv"></div>
+</body>
+</html>
+

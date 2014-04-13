@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <title>Removing Elements with jQuery</title>
+
+  <script src="http://code.jquery.com/jquery-2.0.0b1.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+  
+  <style>
+    #div1 {
+      position: relative;
+      width:  400px;
+      height: 200px;
+      background: #aaa;
+    }
+  </style>
+ </head>
+
+ <body> 
+  <div id="div1">
+    <p style="color:red"    id="Steve">Hello From Paragraph One</p>
+    <p style="color:blue"   id="Dave">Goodbye From Paragraph Two</p>
+    <p style="color:yellow" id="Jane">Jane Says Hello</p>
+    <p style="color:green"  id="Michelle">Michelle Says Goodbye</p>
+    <p style="color:black"  id="Jim">Jim Just Woke Up</p>
+    <p style="color:red"    id="Tracy">Tracy Went To Sleep</p>
+  </div> 
+
+  <script>
+   $(document).ready(function(){
+     $("p:even").css({color:'white'});
+     $("p:odd").css({color:'red'});
+     $("p:first").css({color:'yellow'});
+     $("p:last").css({color:'blue'});
+
+     // remove the <p> element Dave
+     $("#Dave").remove();
+
+     // remove the <p> element Michelle
+     $("div1").remove("#Michelle");
+
+     // remove <p> elements containing "Goodbye" 
+     $("p").filter(":contains('Goodbye')").remove();
+   });
+  </script>
+ </body>
+</html>
+
