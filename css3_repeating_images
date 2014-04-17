@@ -1,0 +1,7 @@
+background-repeat: repeats the background image 
+background-repeat:repeat-x: repeats the background image horizontally 
+
+body {
+  background-image:url("logo250x135.gif");
+  background-repeat:repeat-x;
+}   
